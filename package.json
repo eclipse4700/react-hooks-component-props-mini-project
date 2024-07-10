@@ -4,7 +4,8 @@
   "private": true,
   "jest": {
     "transform": {
-      "^.+\\.js$": "babel-jest"    }
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -16,12 +17,16 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__traverse": "^7.20.6",
+    "@types/q": "^1.5.8",
+    "@types/qs": "^6.9.15",
     "mocha": "^8.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo \".results.json\" && react-scripts test --reporters=@learn-co-curriculum/jest-learn-reporter --reporters=default --watchAll",
+    "test": "NODE_OPTIONS=--max-old-space-size=4096 react-scripts test --reporters=@learn-co-curriculum/jest-learn-reporter --reporters=default --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
